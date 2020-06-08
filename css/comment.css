@@ -1,0 +1,101 @@
+/* @import "main.css"; */
+
+.main_container
+{
+
+        display: flex;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 1000px;
+      height: 600px;
+      transform: translate(-50%, -50%);
+      box-shadow: 1px 2px 20px #f3f3f3;
+      border-radius: 10px;
+      border: 1px solid #f4f6f8;
+      font-size: 14px;
+
+}
+.main__tasks{
+
+        flex: 1;
+        padding: 30px;
+        overflow-x: hidden;
+
+
+         form
+            {
+
+                padding-top: 3%;
+                display: flex;
+            }
+       }
+
+fieldset
+       {
+         border: solid 2px lightgrey;
+         width: 430px;
+         margin: auto;
+        }
+.tasks__title{
+text-align:center;
+}
+
+
+.sidenav {
+    height: 573px;
+    width: 160px;
+      background-color: #f4f6f8;
+    border-right: 1px solid #f1f1f1;
+
+    overflow-x: hidden;
+    padding-top: 20px;
+    text-align: left;
+    padding: 0px 10px;
+    padding-top: 30px;
+
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+.main__tasks::-webkit-scrollbar-button {
+  width: 5px;
+  height: 0px
+}
+
+/* Цвет дорожки, по которой двигается бегунок прокрутки. */
+.main__tasks::-webkit-scrollbar-track {
+  background-color: #ecedee
+}
+
+/* Цвет бегунка полосы, а так же его закругление. */
+.main__tasks::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+  background-color: #818181;
+}
+
+/* Цвет бегунка при наведении на него курсора. */
+.main__tasks::-webkit-scrollbar-thumb:hover {
+  background-color: #f1f1f1;
+}
+
+/* Основная ширина полосы прокрутки. */
+.main__tasks::-webkit-resizer {
+  width: 4px;
+  height: 0px
+}
+.main__tasks::-webkit-scrollbar {
+  width: 4px;
+}

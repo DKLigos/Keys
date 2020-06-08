@@ -1,0 +1,21 @@
+/*Задаёт стиль сайта в общих моментах*/
+.header
+{
+    /* border: 2px solid red; */
+    padding-top: 3%;
+    display: flex;
+    height: auto;
+    line-height: normal;
+}
+
+.title_of_page
+{
+    /* border: 2px solid green; */
+    display: block;
+    flex: 1;
+    text-align: center;
+    font-size: 35pt;
+    color: rgb(22, 29, 43);
+    font-family: Lucida Sans Unicode;
+    letter-spacing: 3pt;
+}

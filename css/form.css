@@ -1,0 +1,46 @@
+musthave
+{
+    color: red;
+}
+input, select
+{
+    padding: 10px 8px;
+    font-family: muller light;
+    font-size: 12pt;
+    box-shadow: none;    
+}
+legend, label
+{
+    font-family: muller light;
+    color: rgb(22, 29, 43);
+    font-size: 13pt;
+}
+td
+{
+    padding: 5px 10px 5px 10px;
+    width: 124pt;
+}
+.inp, textarea
+{
+    width: 200px;
+    border : 0px solid black;
+    border-radius: 3px;
+    border-style: solid;
+}
+#send_feedback
+{
+    margin-left: 10px;
+}
+table
+{
+    display: inline-block;
+}
+textarea
+{
+    height: 50px;
+    font-size: 12pt;
+    padding: 5px;
+    font-family: muller light;
+    border-radius: 5px;
+    max-width: 420px;
+}

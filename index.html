@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="css/comment.css" type="text/css">
+    <link rel="stylesheet" href="css/form.css" type="text/css">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <script src="js/form_styles.js" type="text/javascript"></script>
+    <script src="js/get.js" type="text/javascript"></script>
+    <script src="js/jquery-3.3.1.js" type="text/javascript"></script>
+<title>Оставить отзыв</title>
+</head>
+<body onload="get_regions();">
+    <div class="main_container">
+        <div class="sidenav">
+            <a href="comment.html">Оставить отзыв</a>
+            <a href="view.html">Просмотр отзывов</a>
+            <a href="stat.html">Статистика</a>
+
+
+        </div>
+        <div class="main__tasks">
+            <h2 class="tasks__title">Форма обратной связи</h2>
+            <form id="postForm" name="postForm" action="cgi-bin/add_post_to_db.py"
+                     onreset="res();" onsubmit="return validate();" method="POST">
+                <fieldset>
+                    <table>
+                        <tr>
+                            <td><label for="first_name">Имя <musthave>*</musthave></label></td>
+                            <td><input required id="first_name" name="first_name" type="text" class="inp" placeholder="Имя" onkeyup="checkName(this.value)"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="second_name">Фамилия <musthave>*</musthave></label></td>
+                            <td><input required id="second_name" name="second_name" type="text" class="inp" placeholder="Фамилия" onkeyup="checkSecondName(this.value)"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="patronomic">Отчество</label></td>
+                            <td><input id="patronomic" name ="patronomic" type="text" class="inp" placeholder="Отчество" onkeyup="checkPatronomic(this.value)"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="reg">Регион</label></td>
+                            <td>
+                                <select id="reg" name="reg" onchange="get_cities(this)">
+                                    <!-- <option value="-">Выберете регион</option> -->
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="city">Город</label></td>
+                            <td>
+                                <select id="city" name="city">
+                                    <option value="">Выберете город</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="phone">Номер телефона</label></td>
+                            <td><input id="phone" name="phone" type="tel" class="inp" placeholder="8(___)___-__-__" onkeyup="checkNumber(this.value)"></td>
+
+                        </tr>
+                        <tr>
+                            <td><label for="email">E-mail</label></td>
+                            <td><input id="email" name="email" type="email" class="inp" placeholder="Электроннная почта" onkeyup="checkEmail(this.value)"></td>
+
+                        </tr>
+                        <tr>
+                            <td><label for="post">Комментарий <musthave>*</musthave></label></td>
+                            <td><textarea required id="post" name="post" placeholder="Введите Ваш отзыв" onkeyup="checkTextArea(this.value)"></textarea></td>
+                        </tr>
+                    </table>
+                    <br><input type="submit" id="sendFeedback" value="Отправить">
+                        <input type="reset" value="Сбросить">
+                </fieldset>
+             </form>
+        </div>
+    </div>
+</body>
+</html>
